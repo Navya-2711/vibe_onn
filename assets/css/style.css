@@ -1,0 +1,210 @@
+/* ==========================================================================
+   VIBEONN PARTY HALL IN VIJAYAWADA - LUXURY DESIGN SYSTEM
+   Color Palette: Pure Soft White, Metallic Gold, Deep Onyx Black
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Color System */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFB;
+  --bg-tertiary: #F3F4F8;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+  --bg-glass-card: rgba(255, 255, 255, 0.92);
+
+  --text-dark: #0F1015;
+  --text-muted: #4A4E5D;
+  --text-light: #7A7E8D;
+  --text-white: #FFFFFF;
+
+  --gold-primary: #D4AF37;
+  --gold-light: #F4E07B;
+  --gold-dark: #A4801B;
+  --gold-bronze: #B8860B;
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 45%, #AA771C 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, rgba(245, 230, 163, 0.08) 50%, rgba(170, 119, 28, 0.12) 100%);
+  --gold-glow: 0 10px 30px rgba(212, 175, 55, 0.25);
+  
+  --black-solid: #0A0B0E;
+  --black-subtle: #14161D;
+  
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 20px 45px rgba(15, 16, 21, 0.1);
+  --shadow-gold: 0 12px 35px rgba(212, 175, 55, 0.2);
+
+  /* Typography */
+  --font-heading: 'Cinzel', serif;
+  --font-accent: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Layout & Spacing */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --transition-fast: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Global */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F1F5;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-primary);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* Typography Utility Classes */
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+.text-gold {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-solid {
+  color: var(--gold-primary);
+}
+
+.subhead-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold-dark);
+  background: rgba(212, 175, 55, 0.1);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  margin-bottom: 12px;
+}
+
+/* Section Wrapper */
+.section {
+  padding: 100px 5%;
+  position: relative;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 60px auto;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Global Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold {
+  background: var(--gold-gradient);
+  color: var(--black-solid);
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(212, 175, 55, 0.35);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text-dark);
+  border: 2px solid var(--black-solid);
+}
+
+.btn-outline-dark:hover {
+  background: var(--black-solid);
+  color: var(--text-white);
+  transform: translateY(-3px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-dark);
+  border: 2px solid var(--gold-primary);
+}
+
+.btn-outline-gold:hover {
+  background: var(--gold-gradient);
+  color: var(--black-solid);
+  transform: translateY(-3px);
+}

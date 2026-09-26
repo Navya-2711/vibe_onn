@@ -1295,6 +1295,9 @@
   .nav-menu {
     display: none;
   }
+  .header-actions > .btn {
+    display: none;
+  }
   .hamburger {
     display: flex;
   }
